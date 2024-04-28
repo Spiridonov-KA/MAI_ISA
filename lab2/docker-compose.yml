@@ -31,8 +31,8 @@ services:
 
   user_service:
     build:
-      context: ./services/user
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.user_service
     container_name: user_service
     environment:
       - DB_HOST=mai-db-node-ex01
@@ -50,8 +50,8 @@ services:
 
   lecture_service:
     build:
-      context: ./services/lecture
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.lecture_service
     container_name: lecture_service
     environment:
       - DB_HOST=mai-db-node-ex01
@@ -69,8 +69,8 @@ services:
 
   conference_service:
     build:
-      context: ./services/conference
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.conference_service
     container_name: conference_service
     environment:
       - DB_HOST=mai-db-node-ex01
